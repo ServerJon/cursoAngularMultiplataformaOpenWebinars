@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "projects": {
-    "albums-web": "apps/albums-web",
-    "albums-web-e2e": "apps/albums-web-e2e"
-  }
+    "version": 2,
+    "projects": {
+        "albums-web": "apps/albums-web",
+        "albums-web-e2e": "apps/albums-web-e2e"
+    }
 }

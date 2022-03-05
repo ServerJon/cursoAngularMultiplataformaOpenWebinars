@@ -10,7 +10,9 @@
     "build": "nx build",
     "build:web": "nx build albums-web",
     "build-prod:web": "nx build albums-web --prod",
-    "test": "nx test"
+    "test": "nx test",
+    "format:write": "prettier --ignore-path .gitignore --write .",
+    "lint:web": "ng lint albums-web"
   },
   "private": true,
   "dependencies": {

@@ -1,19 +1,19 @@
 {
-  "recommendations": [
-    "angular.ng-template",
-    "nrwl.angular-console",
-    "esbenp.prettier-vscode",
-    "firsttris.vscode-jest-runner",
-    "dbaeumer.vscode-eslint",
-    "usernamehw.errorlens",
-    "equinusocio.vsc-community-material-theme",
-    "eamodio.gitlens",
-    "davidanson.vscode-markdownlint",
-    "equinusocio.vsc-material-theme-icons",
-    "visualstudioexptteam.vscodeintellicode",
-    "johnpapa.angular-essentials",
-    "formulahendry.auto-rename-tag",
-    "syler.sass-indented",
-    "meganrogge.template-string-converter"
-  ]
+    "recommendations": [
+        "angular.ng-template",
+        "nrwl.angular-console",
+        "esbenp.prettier-vscode",
+        "firsttris.vscode-jest-runner",
+        "dbaeumer.vscode-eslint",
+        "usernamehw.errorlens",
+        "equinusocio.vsc-community-material-theme",
+        "eamodio.gitlens",
+        "davidanson.vscode-markdownlint",
+        "equinusocio.vsc-material-theme-icons",
+        "visualstudioexptteam.vscodeintellicode",
+        "johnpapa.angular-essentials",
+        "formulahendry.auto-rename-tag",
+        "syler.sass-indented",
+        "meganrogge.template-string-converter"
+    ]
 }
