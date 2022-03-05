@@ -1,0 +1,11 @@
+<div class="container details-container">
+    <mat-card class="card" *ngFor="let photo of photos">
+        <mat-card-title-group>
+            <mat-card-title>{{ photo.title }}</mat-card-title>
+            <img mat-card-xl-image [src]="photo.url" />
+        </mat-card-title-group>
+        <mat-card-content>
+            {{ photo.thumbnailUrl }}
+        </mat-card-content>
+    </mat-card>
+</div>

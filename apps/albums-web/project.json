@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/albums-web",
         "index": "apps/albums-web/src/index.html",
@@ -18,7 +20,10 @@
           "apps/albums-web/src/favicon.ico",
           "apps/albums-web/src/assets"
         ],
-        "styles": ["apps/albums-web/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/albums-web/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -83,7 +88,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/albums-web"],
+      "outputs": [
+        "coverage/apps/albums-web"
+      ],
       "options": {
         "jestConfig": "apps/albums-web/jest.config.js",
         "passWithNoTests": true

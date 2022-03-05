@@ -1,0 +1,19 @@
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  height: auto;
+}
+
+.details-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  max-width: 400px;
+  height: auto;
+  margin: 8px;
+}

@@ -1,0 +1,95 @@
+<mat-toolbar color="primary">
+    <button
+        mat-icon-button
+        aria-label="Icon-button with menu icon"
+        *ngIf="showHideSidenav; else backArrow"
+        (click)="drawer.toggle()"
+    >
+        <mat-icon>menu</mat-icon>
+    </button>
+    <ng-template #backArrow>
+        <button
+            mat-icon-button
+            aria-label="Icon-button with arrow icon"
+            (click)="_location.back()"
+        >
+            <mat-icon>west</mat-icon>
+        </button>
+    </ng-template>
+    <span>Angular en la multiplataforma</span>
+</mat-toolbar>
+
+<mat-drawer-container class="body-container" autosize hasBackdrop="true">
+    <mat-drawer #drawer class="sidenav-menu" mode="side">
+        <h3><mat-icon>explore</mat-icon> Documentación OpenWebinars:</h3>
+        <mat-list role="list">
+            <mat-list-item role="listitem">
+                <mat-icon>arrow_circle_up</mat-icon>
+                <a
+                    href="https://openwebinars.net/academia/portada/nativescript-angular/"
+                    target="_blank"
+                >
+                    Desarrollo de apps con Nativescript</a
+                >
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-icon>flight_takeoff</mat-icon>
+                <a
+                    href="https://openwebinars.net/academia/portada/angular/"
+                    target="_blank"
+                >
+                    Introducción a Angular</a
+                >
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-icon>tips_and_updates</mat-icon>
+                <a
+                    href="https://openwebinars.net/academia/portada/angular-ampliar-conceptos/"
+                    target="_blank"
+                >
+                    Ampliando conceptos sobre Angular</a
+                >
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-icon>smartphone</mat-icon>
+                <a
+                    href="https://openwebinars.net/academia/portada/crear-pwa-angular/"
+                    target="_blank"
+                >
+                    Crear PWA con Angular</a
+                >
+            </mat-list-item>
+        </mat-list>
+        <h3><mat-icon>info</mat-icon> Documentación Oficial:</h3>
+        <mat-list role="list">
+            <mat-list-item role="listitem">
+                <mat-icon>description</mat-icon>
+                <a href="https://angular.io/" target="_blank">Angular</a>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-icon>description</mat-icon>
+                <a href="https://www.electronjs.org/" target="_blank"
+                    >Electron</a
+                >
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-icon>description</mat-icon
+                ><a href="https://nativescript.org/" target="_blank"
+                    >Nativescript</a
+                ></mat-list-item
+            >
+            <mat-list-item role="listitem">
+                <mat-icon>description</mat-icon>
+                <a
+                    href="https://v6.docs.nativescript.org/angular/code-sharing/intro"
+                    target="_blank"
+                    >Shared project Nativescript</a
+                >
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>

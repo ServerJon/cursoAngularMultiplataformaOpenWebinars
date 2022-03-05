@@ -1,6 +1,12 @@
+# Curso Angular en la Multiplataforma
 
+Repositorio relacionado con el curso de 'Angular en la multiplataforma'.
 
-# CursoAngularMultiplataformaOpenWebinars
+## Como ejecutar la aplicación
+
+1. Descargar el proyecto con `git clone https://github.com/ServerJon/cursoAngularMultiplataformaOpenWebinars`.
+2. Instalar dependencias con `npm i`.
+3. Para ejecutar los comandos para poder lanzar las aplicaciones puedes ver el fichero `package.json`.
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -24,18 +30,18 @@ These capabilities include generating applications, libraries, etc as well as th
 
 Below are our core plugins:
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+-   [Angular](https://angular.io)
+    -   `ng add @nrwl/angular`
+-   [React](https://reactjs.org)
+    -   `ng add @nrwl/react`
+-   Web (no framework frontends)
+    -   `ng add @nrwl/web`
+-   [Nest](https://nestjs.com)
+    -   `ng add @nrwl/nest`
+-   [Express](https://expressjs.com)
+    -   `ng add @nrwl/express`
+-   [Node](https://nodejs.org)
+    -   `ng add @nrwl/node`
 
 There are also many [community plugins](https://nx.dev/community) you could add.
 
@@ -86,11 +92,6 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
 
 ## ☁ Nx Cloud
 

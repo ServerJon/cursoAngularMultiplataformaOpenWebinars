@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="mat-elevation-z8 mat-table">
+        <table mat-table [dataSource]="datos">
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>Id.</th>
+                <td mat-cell *matCellDef="let element" matRipple>
+                    {{ element.id }}
+                </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef>Titulo</th>
+                <td mat-cell *matCellDef="let element" matRipple>
+                    {{ element.title }}
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+            <tr
+                mat-row
+                *matRowDef="let row; columns: columnas"
+                [routerLink]="['/details', row.id]"
+            ></tr>
+        </table>
+
+        <mat-paginator
+            [pageSizeOptions]="[5, 10, 20]"
+            pageSize="10"
+            showFirstLastButtons
+            aria-label="Seleccionar la cantidad de elementos"
+        >
+        </mat-paginator>
+    </div>
+</div>
