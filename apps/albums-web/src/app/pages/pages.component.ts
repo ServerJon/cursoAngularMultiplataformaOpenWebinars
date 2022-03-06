@@ -1,7 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ReplaySubject, takeUntil } from 'rxjs';
-import { RouterService } from './../core/services';
+import { RouterService } from '@data/services';
 
 @Component({
     templateUrl: './pages.component.html',

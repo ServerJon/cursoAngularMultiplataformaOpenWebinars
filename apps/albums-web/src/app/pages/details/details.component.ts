@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReplaySubject, takeUntil } from 'rxjs';
-import { Photo } from './../../core/interfaces';
-import { PhotoService } from './../../core/services';
+import { Photo } from '@typescript-common/interfaces';
+import { PhotoService } from '@data/services';
 
 @Component({
     templateUrl: './details.component.html',

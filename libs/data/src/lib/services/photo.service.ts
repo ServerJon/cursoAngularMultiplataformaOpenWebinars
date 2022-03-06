@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { API_URL } from '../constants';
-import { Photo } from '../interfaces';
+import { API_URL } from '@typescript-common/constants';
+import { Photo } from '@typescript-common/interfaces';
 
 @Injectable()
 export class PhotoService {
