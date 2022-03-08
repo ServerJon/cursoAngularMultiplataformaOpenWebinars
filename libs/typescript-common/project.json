@@ -1,26 +1,28 @@
 {
-    "projectType": "library",
-    "root": "libs/typescript-common",
-    "sourceRoot": "libs/typescript-common/src",
-    "prefix": "curso-angular-multiplataforma-open-webinars",
-    "targets": {
-        "test": {
-            "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/libs/typescript-common"],
-            "options": {
-                "jestConfig": "libs/typescript-common/jest.config.js",
-                "passWithNoTests": true
-            }
-        },
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "options": {
-                "lintFilePatterns": [
-                    "libs/typescript-common/src/**/*.ts",
-                    "libs/typescript-common/src/**/*.html"
-                ]
-            }
-        }
+  "projectType": "library",
+  "root": "libs/typescript-common",
+  "sourceRoot": "libs/typescript-common/src",
+  "prefix": "curso-angular-multiplataforma-open-webinars",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/typescript-common"
+      ],
+      "options": {
+        "jestConfig": "libs/typescript-common/jest.config.js",
+        "passWithNoTests": true
+      }
     },
-    "tags": []
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/typescript-common/src/**/*.ts",
+          "libs/typescript-common/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
 }
