@@ -12,7 +12,8 @@
     "build-prod:web": "nx build albums-web --prod",
     "test": "nx test",
     "format:write": "prettier --ignore-path .gitignore --write .",
-    "lint:web": "ng lint albums-web"
+    "lint:web": "ng lint albums-web",
+    "server:web": "angular-http-server --open -p 8880 --path ./dist/apps/albums-web"
   },
   "private": true,
   "dependencies": {
@@ -52,6 +53,7 @@
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "~5.10.0",
     "@typescript-eslint/parser": "~5.10.0",
+    "angular-http-server": "^1.10.0",
     "cypress": "^9.1.0",
     "eslint": "~8.7.0",
     "eslint-config-prettier": "8.1.0",
