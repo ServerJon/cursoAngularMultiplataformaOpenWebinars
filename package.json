@@ -13,7 +13,7 @@
     "test": "nx test",
     "format:write": "prettier --ignore-path .gitignore --write .",
     "lint:web": "ng lint albums-web",
-    "server:web": "angular-http-server --open -p 8880 --path ./dist/apps/albums-web"
+    "server:web": "npm run build-prod:web && angular-http-server --open -p 8880 --path ./dist/apps/albums-web"
   },
   "private": true,
   "dependencies": {
