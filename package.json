@@ -2,18 +2,25 @@
   "name": "curso-angular-multiplataforma-open-webinars",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "dist/apps/albums-electron/main.js",
+  "author": {
+    "email": "jonatanlucasmolina@gmail.com",
+    "name": "Jonatan Lucas"
+  },
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "start:web": "nx serve albums-web --port 4210",
+    "start:desktop": "npm run build:desktop && electron .",
     "build": "nx build",
     "build:web": "nx build albums-web",
     "build-prod:web": "nx build albums-web --prod",
+    "build:desktop": "ng build --prod --base-href ./ && ng build albums-electron",
     "test": "nx test",
     "format:write": "prettier --ignore-path .gitignore --write .",
     "lint:web": "ng lint albums-web",
-    "server:web": "npm run build-prod:web && angular-http-server --open -p 8880 --path ./dist/apps/albums-web"
+    "server:pwa": "npm run build-prod:web && angular-http-server --open -p 8880 --path ./dist/apps/albums-web"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +54,7 @@
     "@nrwl/eslint-plugin-nx": "13.8.3",
     "@nrwl/jest": "13.8.3",
     "@nrwl/linter": "13.8.3",
+    "@nrwl/node": "^13.8.5",
     "@nrwl/tao": "13.8.3",
     "@nrwl/workspace": "13.8.3",
     "@types/jest": "27.0.2",
@@ -55,6 +63,8 @@
     "@typescript-eslint/parser": "~5.10.0",
     "angular-http-server": "^1.10.0",
     "cypress": "^9.1.0",
+    "electron": "^17.1.1",
+    "electron-reload": "^2.0.0-alpha.1",
     "eslint": "~8.7.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",

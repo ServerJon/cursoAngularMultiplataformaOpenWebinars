@@ -1,0 +1,52 @@
+{
+    "root": "apps/albums-electron",
+    "sourceRoot": "apps/albums-electron/src",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/node:webpack",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/albums-electron",
+                "main": "apps/albums-electron/src/main.ts",
+                "tsConfig": "apps/albums-electron/tsconfig.app.json",
+                "assets": ["apps/albums-electron/src/assets"]
+            },
+            "configurations": {
+                "production": {
+                    "optimization": true,
+                    "extractLicenses": true,
+                    "inspect": false,
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/albums-electron/src/environments/environment.ts",
+                            "with": "apps/albums-electron/src/environments/environment.prod.ts"
+                        }
+                    ]
+                }
+            }
+        },
+        "serve": {
+            "executor": "@nrwl/node:node",
+            "options": {
+                "buildTarget": "albums-electron:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/albums-electron/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/albums-electron"],
+            "options": {
+                "jestConfig": "apps/albums-electron/jest.config.js",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}
