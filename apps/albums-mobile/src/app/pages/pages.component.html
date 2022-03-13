@@ -1,0 +1,89 @@
+<ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+        <ion-content>
+            <ion-list id="inbox-list">
+                <ion-list-header>Explore</ion-list-header>
+                <ion-note>Documentación OpenWebinars:</ion-note>
+
+                <ion-item>
+                    <ion-icon name="caret-up-circle-outline"></ion-icon>
+                    <ion-label>
+                        <a
+                            href="https://openwebinars.net/academia/portada/nativescript-angular/"
+                            target="_blank"
+                        >
+                            Desarrollo de apps con Nativescript</a
+                        >
+                    </ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="airplane-outline"></ion-icon>
+                    <ion-label>
+                        <a
+                            href="https://openwebinars.net/academia/portada/angular/"
+                            target="_blank"
+                        >
+                            Introducción a Angular</a
+                        >
+                    </ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="bar-chart-outline"></ion-icon>
+                    <ion-label>
+                        <a
+                            href="https://openwebinars.net/academia/portada/angular-ampliar-conceptos/"
+                            target="_blank"
+                        >
+                            Ampliando conceptos sobre Angular</a
+                        >
+                    </ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-icon name="phone-portrait-outline"></ion-icon>
+                    <ion-label>
+                        <a
+                            href="https://openwebinars.net/academia/portada/crear-pwa-angular/"
+                            target="_blank"
+                        >
+                            Crear PWA con Angular</a
+                        >
+                    </ion-label>
+                </ion-item>
+            </ion-list>
+
+            <ion-list id="labels-list">
+                <ion-list-header>Info</ion-list-header>
+                <ion-note>Documentación Oficial:</ion-note>
+
+                <ion-item *ngFor="let label of labels" lines="none">
+                    <ion-icon
+                        slot="start"
+                        ios="bookmark-outline"
+                        md="bookmark-sharp"
+                    ></ion-icon>
+                    <ion-label>
+                        <a
+                            [href]="label.url"
+                            target="_blank"
+                        >
+                            {{label.title}}</a
+                        >
+                    </ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+        <ion-header>
+            <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Angular en la multiplataforma</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content [fullscreen]="true">
+            <ion-router-outlet id="content"></ion-router-outlet>
+        </ion-content>
+    </div>
+</ion-split-pane>

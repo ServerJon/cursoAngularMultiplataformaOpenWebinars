@@ -1,0 +1,9 @@
+<ion-list>
+    <ion-list-header>Albums list</ion-list-header>
+    <ion-item *ngFor="let element of albums">
+        <ion-label [routerLink]="['/details', element.id]">
+            <h2>{{ element.id }}</h2>
+            <p>{{ element.title }}</p>
+        </ion-label>
+    </ion-item>
+</ion-list>
