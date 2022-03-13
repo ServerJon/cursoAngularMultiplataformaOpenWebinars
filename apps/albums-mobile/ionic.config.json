@@ -1,0 +1,7 @@
+{
+    "name": "albums-mobile",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "angular"
+}

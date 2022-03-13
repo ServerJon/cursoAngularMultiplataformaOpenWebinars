@@ -1,0 +1,6 @@
+{
+  "name": "albums-mobile",
+  "devDependencies": {
+    "@capacitor/cli": "^3.2.5"
+  }
+}
