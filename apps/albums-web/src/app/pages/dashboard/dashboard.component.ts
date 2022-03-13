@@ -8,8 +8,8 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { ReplaySubject, takeUntil } from 'rxjs';
-import { Album } from '../../core/interfaces';
-import { AlbumService } from './../../core/services';
+import { Album } from '@typescript-common/interfaces';
+import { AlbumService } from '@data/services';
 
 @Component({
     templateUrl: './dashboard.component.html',

@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject, filter, Observable, Subject, takeUntil } from 'rxjs';
 
-@Injectable({
-    providedIn: 'root',
-})
+@Injectable()
 export class RouterService {
     private routing: BehaviorSubject<string> = new BehaviorSubject<string>('');
     private destructor: Subject<void> = new Subject<void>();

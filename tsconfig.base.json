@@ -14,7 +14,10 @@
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "@data/*": ["libs/data/src/lib/*"],
+            "@typescript-common/*": ["libs/typescript-common/src/*"]
+        }
     },
     "exclude": ["node_modules", "tmp"]
 }

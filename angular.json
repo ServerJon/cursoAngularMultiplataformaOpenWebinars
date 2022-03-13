@@ -1,7 +1,12 @@
 {
     "version": 2,
     "projects": {
+        "albums-electron": "apps/albums-electron",
+        "albums-mobile": "apps/albums-mobile",
+        "albums-mobile-e2e": "apps/albums-mobile-e2e",
         "albums-web": "apps/albums-web",
-        "albums-web-e2e": "apps/albums-web-e2e"
+        "albums-web-e2e": "apps/albums-web-e2e",
+        "data": "libs/data",
+        "typescript-common": "libs/typescript-common"
     }
 }
