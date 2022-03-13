@@ -14,16 +14,19 @@
     "start": "nx serve",
     "start:web": "nx serve albums-web --port 4210",
     "start:desktop": "npm run build:desktop && electron .",
+    "start:mobile": "nx run albums-mobile:add:android && nx run albums-mobile:open:android",
     "build": "nx build",
     "build:web": "nx build albums-web",
     "build-prod:web": "nx build albums-web --prod",
     "build:desktop": "ng build albums-web --prod --base-href ./ && ng build albums-electron",
+    "build:mobile": "nx build albums-mobile",
     "electron:linux": "npm run build:desktop && electron-builder build --linux",
     "electron:windows": "npm run build:desktop && electron-builder build --windows",
     "test": "nx test",
     "format:write": "prettier --ignore-path .gitignore --write .",
     "lint:web": "ng lint albums-web",
-    "server:web": "npm run build-prod:web && angular-http-server --open -p 8880 --path ./dist/apps/albums-web"
+    "server:web": "npm run build-prod:web && angular-http-server --open -p 8880 --path ./dist/apps/albums-web",
+    "sync:mobile": "nx run albums-mobile:sync:android"
   },
   "private": true,
   "build": {

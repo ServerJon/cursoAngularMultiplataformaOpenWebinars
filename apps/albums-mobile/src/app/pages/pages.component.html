@@ -2,6 +2,14 @@
     <ion-menu contentId="main-content" type="overlay">
         <ion-content>
             <ion-list id="inbox-list">
+                <ion-list-header>Menu</ion-list-header>
+                <ion-item>
+                    <ion-icon name="grid-outline"></ion-icon>
+                    <ion-label [routerLink]="['/dashboard']">
+                        Listado Albums
+                    </ion-label>
+                </ion-item>
+
                 <ion-list-header>Explore</ion-list-header>
                 <ion-note>Documentación OpenWebinars:</ion-note>
 
@@ -75,15 +83,15 @@
     </ion-menu>
     <div class="ion-page" id="main-content">
         <ion-header>
-            <ion-toolbar>
-            <ion-buttons slot="start">
-                <ion-menu-button></ion-menu-button>
-            </ion-buttons>
-            <ion-title>Angular en la multiplataforma</ion-title>
+            <ion-toolbar class="custom-toolbar">
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>Angular en la multiplataforma</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content [fullscreen]="true">
-            <ion-router-outlet id="content"></ion-router-outlet>
+        <ion-content>
+            <ion-router-outlet id="main-content"></ion-router-outlet>
         </ion-content>
     </div>
 </ion-split-pane>
